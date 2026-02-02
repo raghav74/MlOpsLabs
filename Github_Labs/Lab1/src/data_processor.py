@@ -1,6 +1,6 @@
 def normalize(data):
     """
-    Normalizes list of numbers to range [0, 1].
+    Normalizes the list of numbers to range [0, 1].
     """
     if not isinstance(data, list) or len(data) == 0:
         raise ValueError("Input must be a non empty list")
