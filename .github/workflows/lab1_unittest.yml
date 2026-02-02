@@ -1,0 +1,43 @@
+name: Lab1 - Python Unittests
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'Github_Labs/Lab1/**'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'Github_Labs/Lab1/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: Github_Labs/Lab1
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: Install dependencies
+      run: pip install -r requirements.txt
+
+    - name: Run unittests
+      run: python -m unittest test.test_unittest
+
+    - name: Notify on success
+      if: success()
+      run: echo "Unit tests passed successfully"
+
+    - name: Notify on failure
+      if: failure()
+      run: echo "Unit tests failed"
