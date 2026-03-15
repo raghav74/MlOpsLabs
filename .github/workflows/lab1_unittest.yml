@@ -6,11 +6,14 @@ on:
       - main
     paths:
       - 'Github_Labs/Lab1/**'
+      - '.github/workflows/lab1_unittest.yml'
   pull_request:
     branches:
       - main
     paths:
       - 'Github_Labs/Lab1/**'
+      - '.github/workflows/lab1_unittest.yml'
+  workflow_dispatch:  # Allows manual trigger from GitHub UI
 
 jobs:
   build:
