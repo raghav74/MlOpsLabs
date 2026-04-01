@@ -1,0 +1,7 @@
+data:
+  seed: 42
+
+train:
+  epochs: 5
+  batch_size: 64
+  learning_rate: 0.001

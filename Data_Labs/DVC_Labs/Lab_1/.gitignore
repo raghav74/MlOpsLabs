@@ -1,0 +1,12 @@
+# DVC outputs
+data/raw/
+data/processed/
+models/
+metrics/
+
+# DVC local remote
+dvc_remote/
+
+# Python
+__pycache__/
+*.pyc
