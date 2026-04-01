@@ -1,7 +1,8 @@
 # W&B Lab 1 -- Fashion-MNIST Experiment Tracking
 
-PyTorch MLP trained on Fashion-MNIST with metrics, gradients, and confusion matrix logged to W&B.
+PyTorch MLP trained on Fashion-MNIST with metrics logged to W&B.
 
+Sample image-
 ![W&B Dashboard](wandb_sample.png)
 
 ## Setup
